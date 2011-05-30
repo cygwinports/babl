@@ -1,7 +1,7 @@
 category: Graphics
-requires:
+requires: libbabl0.1_0
 external-source: babl
-sdesc: "Any-to-any pixel format conversion library (runtime)"
+sdesc: "Any-to-any pixel format conversion library (GObject Introspection data)"
 ldesc: "Babl is a dynamic, any to any, pixel format conversion library. 
 It provides conversions between the myriad of buffer types images can be 
 stored in. Babl doesn't only help with existing pixel formats, but also 

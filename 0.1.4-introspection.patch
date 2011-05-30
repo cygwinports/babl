@@ -1,0 +1,11 @@
+--- origsrc/babl-0.1.4/babl/Makefile.am	2011-01-20 15:42:59.000000000 -0600
++++ src/babl-0.1.4/babl/Makefile.am	2011-05-30 04:51:09.520594200 -0500
+@@ -92,7 +92,7 @@ if HAVE_INTROSPECTION
+ Babl-$(BABL_API_VERSION).gir: $(G_IR_SCANNER) $(library_include_HEADERS) $(c_sources) $(srcdir)/Makefile.am
+ 	$(INTROSPECTION_SCANNER) -v --namespace Babl --nsversion=$(BABL_API_VERSION) \
+             --add-include-path=$(srcdir) --add-include-path=. \
+-            --library=babl-$(BABL_API_VERSION) \
++            --library=libbabl-$(BABL_API_VERSION).la \
+             --libtool="$(LIBTOOL)" \
+             --output $@ \
+             --pkg babl \
