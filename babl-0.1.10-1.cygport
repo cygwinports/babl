@@ -1,0 +1,23 @@
+CATEGORY="Graphics"
+SUMMARY="Any-to-any pixel format conversion library"
+DESCRIPTION="Babl is a dynamic, any to any, pixel format conversion library.
+It provides conversions between the myriad of buffer types images can be
+stored in. Babl doesn't only help with existing pixel formats, but also
+facilitates creation of new and uncommon ones."
+HOMEPAGE="http://www.gegl.org/babl/"
+SRC_URI="ftp://ftp.gimp.org/pub/${PN}/${PV_MAJ_MIN}/${P}.tar.bz2"
+PATCH_URI="0.1.10-introspection.patch"
+
+PKG_NAMES="libbabl0.1_0 libbabl-devel girepository-Babl0.1 vala-babl0.1"
+libbabl0_1_0_SUMMARY="${SUMMARY} (runtime)"
+libbabl0_1_0_CONTENTS="usr/bin/*-0.1-0.dll usr/lib/babl-0.1/ usr/share/doc/"
+libbabl_devel_SUMMARY="${SUMMARY} (development)"
+libbabl_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+girepository_Babl0_1_SUMMARY="${SUMMARY} (GObject Introspection)"
+girepository_Babl0_1_CONTENTS="usr/*/gir*/Babl-0.1.*"
+vala_babl0_1_SUMMARY="${SUMMARY} (Vala bindings)"
+vala_babl0_1_CONTENTS="usr/share/vala/"
+
+CYGCONF_ARGS="--enable-introspection"
+
+KEEP_LA_FILES="none"
