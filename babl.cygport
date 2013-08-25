@@ -9,9 +9,8 @@ stored in. Babl doesn't only help with existing pixel formats, but also
 facilitates creation of new and uncommon ones."
 HOMEPAGE="http://www.gegl.org/babl/"
 SRC_URI="ftp://ftp.gimp.org/pub/babl/${VERSION%.*}/babl-${VERSION}.tar.bz2"
-PATCH_URI="0.1.10-introspection.patch"
 
-PKG_NAMES="libbabl0.1_0 libbabl-devel girepository-Babl0.1 vala-babl0.1"
+PKG_NAMES="libbabl0.1_0 libbabl-devel" # girepository-Babl0.1 vala-babl0.1"
 libbabl0_1_0_SUMMARY="${SUMMARY} (runtime)"
 libbabl0_1_0_CONTENTS="usr/bin/*-0.1-0.dll usr/lib/babl-0.1/ usr/share/doc/"
 libbabl_devel_SUMMARY="${SUMMARY} (development)"
@@ -21,6 +20,7 @@ girepository_Babl0_1_CONTENTS="usr/*/gir*/Babl-0.1.*"
 vala_babl0_1_SUMMARY="${SUMMARY} (Vala bindings)"
 vala_babl0_1_CONTENTS="usr/share/vala/"
 
-CYGCONF_ARGS="--enable-introspection"
+# broken: https://bugs.gentoo.org/468208
+CYGCONF_ARGS="--disable-introspection"
 
 KEEP_LA_FILES="none"
