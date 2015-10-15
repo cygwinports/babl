@@ -1,5 +1,5 @@
 NAME="babl"
-VERSION=0.1.10
+VERSION=0.1.12
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Any-to-any pixel format conversion library"
@@ -8,7 +8,8 @@ It provides conversions between the myriad of buffer types images can be
 stored in. Babl doesn't only help with existing pixel formats, but also
 facilitates creation of new and uncommon ones."
 HOMEPAGE="http://www.gegl.org/babl/"
-SRC_URI="ftp://ftp.gimp.org/pub/babl/${VERSION%.*}/babl-${VERSION}.tar.bz2"
+SRC_URI="http://download.gimp.org/pub/babl/${VERSION%.*}/babl-${VERSION}.tar.bz2"
+PATCH_URI="http://pkgs.fedoraproject.org/cgit/babl.git/plain/babl-0.1.12-concurrency-stresstest.patch"
 
 PKG_NAMES="libbabl0.1_0 libbabl-devel" # girepository-Babl0.1 vala-babl0.1"
 libbabl0_1_0_SUMMARY="${SUMMARY} (runtime)"
