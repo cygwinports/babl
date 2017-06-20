@@ -1,5 +1,5 @@
 NAME="babl"
-VERSION=0.1.24
+VERSION=0.1.28
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Any-to-any pixel format conversion library"
